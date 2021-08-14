@@ -18,7 +18,7 @@ jobs:
     - name: go-to-dirrectory
       run: cd build
     - name: configure
-      run: ./../configure
+      run: ls ../
     - name: make -j$(nproc)
       run: make -j$(nproc)
     - name: make check
