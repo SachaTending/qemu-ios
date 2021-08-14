@@ -13,9 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: create-dir
+      run: mkdir build
+    - name: go-to-dirrectory
+      run: cd build
     - name: configure
-      run: ./configure
-    - name: make
+      run: ../configure
+    - name: make -j$(nproc)
       run: make
     - name: make check
       run: make check
